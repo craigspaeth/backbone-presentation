@@ -76,7 +76,7 @@ $(function() {
       }
     }
   }
-
+  
   setSlide(0, 'none');
   var keys = '';
   $(document).keyup(function(event) {
@@ -107,4 +107,13 @@ $(function() {
       }, 2000);
     }
   });
+});
+
+$.extend(true, $.deck.defaults, {
+   selectors: {
+      hashLink: '.deck-permalink'
+   },
+
+   hashPrefix: 'slide-',
+   preventFragmentScroll: true
 });

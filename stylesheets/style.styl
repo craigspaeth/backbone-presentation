@@ -1,5 +1,9 @@
 @import url(type.css) 
+@import 'node_modules/nib/index'
 
+purple = #6B03CE
+
+// Global styles
 html
   height 100% 
   width 100%
@@ -17,72 +21,70 @@ body
   width 100% 
   height 100% 
   font-family 'AdobeGaramondProRegular', serif 
+  
+  // Generic element styles
+  a, a:visited
+    color purple
+    text-decoration none 
+  a:hover, a:visited:hover
+    color purple
+    border-bottom 1px solid
+  
+  h1
+    border-bottom 1px solid #000 
+    float left 
+    font-size 26px 
+    font-weight normal 
+    margin 0
+  .purple
+    color purple
+  
+  // Background
+  .bg
+    position absolute 
+    z-index 7 
+    height 100% 
+    width 100%
+    
+  // Stage
+  .stage
+    height 675px 
+    height 100% 
+    margin 0 
+    padding 0 
+    position relative 
+    -webkit-transform-style preserve-3d 
+    z-index 8 
+    width 1150px 
+    width 100%
 
-a,
-a:visited
-  color rgb(107,3,206) 
-  text-decoration none 
+.twitter
+  position fixed
+  bottom 0
+  right 0
+  padding 50px
+  font-size 26px
 
-a:hover,
-a:visited:hover
-  color rgb(107,3,206) 
+.table_flip
+  height 150px
+  display block
+  float left
+  line-height 150px
+  margin-right 30px
 
-h1
-  border-bottom 1px solid #000 
-  float left 
-  font-size 26px 
-  font-weight normal 
-  margin 0 
-
+// Footer
 footer
   position absolute 
   bottom 0 
   text-align center 
   width 100% 
   z-index 10 
+  p
+    float left 
 
-footer p
-  float left 
-
-.slide h1
-  letter-spacing 3px 
-
-.slide ul
-  clear both 
-  margin 0 
-  padding 0 
-
-
-ul.arrows
-  font-size 50px 
-  list-style none 
-	margin-left 0 
-	padding-left 1em 
-	text-indent -1em 
-
-ul.arrows li:before
-	content "\00BB \0020" 
-
-.off-stage .slide
-  display none 
-
-.bg
-  position absolute 
-  z-index 7 
-  height 100% 
-  width 100% 
-
-.stage
-  height 675px 
-  height 100% 
-  margin 0 
-  padding 0 
-  position relative 
-  -webkit-transform-style preserve-3d 
-  z-index 8 
-  width 1150px 
-  width 100% 
-
+// Generic Slide styles
+.off-stage
+  display none
 .slide
   background-color transparent 
   color #000 
@@ -94,27 +96,61 @@ ul.arrows li:before
   position absolute 
   width 1150px 
   width 100% 
-  -webkit-box-orient vertical 
-  -webkit-box-sizing border-box 
-  -webkit-transition -webkit-transform 0.8s ease-in-out, opacity 1.2s ease-in-out 
-
-.slide h1
-  text-transform uppercase 
-
-.centercontents
+  box-orient vertical 
+  box-sizing border-box 
+  transition -webkit-transform 0.8s ease-in-out, opacity 1.2s ease-in-out
+  h1
+    letter-spacing 3px
+    text-transform uppercase 
+    margin-bottom 1em
+  
+  // List styles
+  ul
+    clear both
+    margin 0
+    padding 0
+    font-size 50px
+    line-height 2em 
+    
+    &.arrows
+      list-style none
+    	margin-left 0
+    	padding-left 1em 
+    	text-indent -1em 
+      li:before
+      	content "\00BB \0020"
+    
+    &.small
+      font-size 15px
+  
+    &.column-12
+      column-count 12
+      
+// Centered contents
+h1.centered
+  text-align center
+.centered
   display -webkit-box 
-  -webkit-box-pack center 
-  -webkit-box-align center 
+  box-pack center 
+  box-align center
+  margin-top -10%
+  &.filled
+    margin-top 0
+  h1
+    float none 
+    margin-bottom 50px
 
-.centercontents h1
-  float none 
-  margin-bottom 50px
-
+// Code
 .code
-  background-color #fff 
-  border-radius 10px 
-  box-shadow 0 3px 15px #000 
+  background-color #fff
+  border 2px so
+  font-family courier
+  padding 0px 20px
+  border 4px solid
+  margin 10px 0
+  font-size 26px
 
+// Transitions
 .far-past
   opacity 0 
   -webkit-transform translateZ(-600px) rotateY(-180deg) translateZ(600px) 
@@ -151,9 +187,9 @@ ul.arrows li:before
   -webkit-backface-visibility hidden 
 
 
-/* Title Slides */
+ // Title Slides 
 .title
-  background-color rgb(107,3,206) 
+  background-color purple
   color #fff 
 
 .title h1

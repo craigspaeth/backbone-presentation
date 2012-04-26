@@ -2,20 +2,20 @@
 html
   head
     title
-      | How Art.sy Uses Backbone.js
+      | Art.sy & Backbone.js
     link(rel='stylesheet', href='stylesheets/normalize.css')
     link(rel='stylesheet', href='stylesheets/style.css')
   body.alt
     .off-stage
-      .slide.title
+      section.slide.title
         .welcome
           .col.artsy_logo
             img(src='images/artsy.png')
           .col
-            h1 How Art.sy Uses Backbone.js
+            h1 Art.sy & Backbone.js
             ul.by
               li
-                p Gib Reimschüssel
+                p Gib Reimschussel
                 p @greims
                 p gib@art.sy
               li
@@ -23,23 +23,96 @@ html
                 p @craigspaeth
                 p craig@art.sy
       
-      .slide.centercontents
-        h1 Art.sy Pitch
+      section.slide
+        .centered.filled
+          h1 The Art Genome Project
+        ul.arrows.small.column-12
+          include genes
       
-      .slide.centercontents
-        .col
-          h1 Our Stack
-          ul.arrows
-            li Rails 3.1.3 (from Rails 2)
-            li Grape API
-            li MongoDB
-            li Node
+      section.slide.centered
+        h1 Our Stack
+        ul.arrows
+          li MongoDB + Rails
+          li Grape API
+          li Coffeescript + Jammit + Backbone
+          li Node
+          
+      section.slide.centered
+        h1 Taming the Beast
+        ul.arrows
+          li 262 coffeescript files, 14,560 lines
+          li Multiple Backbone apps in multiple projects
+            
+      section.slide.centered
+        h1 Coffeescript
+        ul.arrows
+          li Less boilerplate
+          li -> vs =>
+          li 
+            .code App?.Artsy?.Artwork?.get('title')
+          
+      section.slide.centered
+        h1 Abstracts
+        ul.arrows
+          li
+            .code
+              span.purple class 
+              span App.Models.DomainAbstract 
+              span.purple extends 
+              span Backbone.Model
+          li
+            .code
+              span.purple class 
+              span App.Frame 
+              span.purple extends 
+              span Backbone.View
+          li Flexible for unique challenges
       
-      .slide.title
+      section.slide.centered
+        h1 Examples
+        ul.arrows
+          li
+            a( href='http://art.sy/#!/filter/artworks' ) Splash Page
+          li
+            a( href='http://art.sy/#!/filter/artworks' ) Filter Search
+            
+      section.slide.centered
+        h1 Node & Backbone: Backstory
+        ul.arrows
+          li 3.5k + tests, over an hour to build
+          li
+            span.table_flip Selenium/Jasmine-Rails = 
+            img( src='http://chzgifs.files.wordpress.com/2012/03/funny-gifs-nerd-rage.gif', alt="(ﾉಥДಥ)ﾉ︵┻━┻･/", style='height: 150px')
+          li New Apps: CRM & Partner CMS
+          
+      
+      section.slide.centered
+        h1 Node & Backbone: Splitting off to node
+        ul.arrows
+          li Jsdom & Zombie.js
+          li require Backbone app server-side
+          li ~300 tests in 7 seconds
+          
+      section.slide.centered
+        h1 Node & Backbone: Examples
+        ul.arrows
+          li 
+            a( href='http://admin.art.sy/artworks/upload' ) Upload & Template
+          li
+            a( href='http://admin.art.sy/weekly_email' ) Email Generators
+          
+      section.slide.title
         h1
           em
             | Thank you
             br
+            
+          .twitter 
+            | Craig Spaeth
+            br
+            | @craigspaeth
+            br
+            | craig@art.sy
     
     .stage
     script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script
