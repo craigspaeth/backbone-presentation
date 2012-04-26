@@ -1,0 +1,193 @@
+@import url(type.css);
+
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #000;
+  overflow: hidden;
+  -webkit-perspective: 1000px;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  width: 100%;
+  height: 100%;
+  font-family: 'AdobeGaramondProRegular', serif;
+}
+a,
+a:visited {
+  color: rgb(107,3,206);
+  text-decoration: none;
+}
+a:hover,
+a:visited:hover {
+  color: rgb(107,3,206);
+}
+h1 {
+  border-bottom: 1px solid #000;
+  float: left;
+  font-size: 26px;
+  font-weight: normal;
+  margin: 0;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+}
+footer p {
+  float: left;
+}
+.slide h1 {
+  letter-spacing: 3px;
+}
+.slide ul {
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+
+ul.arrows {
+  font-size: 50px;
+  list-style: none;
+	margin-left: 0;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+ul.arrows li:before {
+	content: "\00BB \0020";
+}
+.off-stage .slide {
+  display: none;
+}
+.bg {
+  position: absolute;
+  z-index: 7;
+  height: 100%;
+  width: 100%;
+}
+.stage {
+  height: 675px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  z-index: 8;
+  width: 1150px;
+  width: 100%;
+}
+.slide {
+  background-color: transparent;
+  color: #000;
+  box-shadow: none;
+  font-size: 50px;
+  height: 675px;
+  height: 100%;
+  padding: 50px;
+  position: absolute;
+  width: 1150px;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-sizing: border-box;
+  -webkit-transition: -webkit-transform 0.8s ease-in-out, opacity 1.2s ease-in-out;
+}
+.slide h1 {
+  text-transform: uppercase;
+}
+.centercontents {
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+}
+.centercontents h1 {
+  float: none;
+  margin-bottom: 50px
+}
+.code {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px #000;
+}
+.far-past {
+  opacity: 0;
+  -webkit-transform: translateZ(-600px) rotateY(-180deg) translateZ(600px);
+  -webkit-backface-visibility: hidden;
+}
+.past {
+  opacity: 0;
+  -webkit-transform: translateZ(-600px) rotateX(-90deg) translateZ(600px);
+  -webkit-backface-visibility: hidden;
+}
+.past-alt {
+  opacity: 0;
+  -webkit-transform: translateZ(-600px) rotateX(-90deg) translateZ(600px);
+  -webkit-backface-visibility: hidden;
+}
+.current {
+  opacity: 1;
+  -webkit-transform: translateZ(-600px) rotateY(0deg) translateZ(600px);
+  -webkit-backface-visibility: hidden;
+}
+.future {
+  opacity: 0;
+  -webkit-transform: translateZ(-600px) rotateY(90deg) translateZ(600px);
+  -webkit-backface-visibility: hidden;
+}
+.future-alt {
+  opacity: 0;
+  -webkit-transform: translateZ(-600px) rotateX(90deg) translateZ(600px);
+  -webkit-backface-visibility: hidden;
+}
+.far-future {
+  opacity: 0;
+  -webkit-transform: translateZ(-600px) rotateY(180deg) translateZ(600px);
+  -webkit-backface-visibility: hidden;
+}
+
+/* Title Slides */
+.title {
+  background-color: rgb(107,3,206);
+  color: #fff;
+}
+.title h1 {
+  border-bottom: none;
+  font-size: 70px;
+  text-transform: none;
+}
+.title .col {
+  float: left;
+  height: 100%;
+  width: 700px;
+}
+.title .artsy_logo {
+  float: left;
+  margin-right: 155px;
+  width: auto;
+}
+.title .by {
+  float: left;
+  list-style: none;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 50px;
+}
+.title .by li {
+  float: left;
+  margin: 0;
+  margin-right: 100px;
+  list-style: none;
+}
+.title .by li p {
+  font-size: 30px;
+  line-height: 38px;
+  margin: 0;
+}
