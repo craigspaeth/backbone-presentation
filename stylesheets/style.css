@@ -1,5 +1,4 @@
-@import url(type.css);
-
+@import url("type.css");
 html {
   height: 100%;
   width: 100%;
@@ -20,12 +19,12 @@ body {
 }
 a,
 a:visited {
-  color: rgb(107,3,206);
+  color: #6b03ce;
   text-decoration: none;
 }
 a:hover,
 a:visited:hover {
-  color: rgb(107,3,206);
+  color: #6b03ce;
 }
 h1 {
   border-bottom: 1px solid #000;
@@ -52,16 +51,16 @@ footer p {
   margin: 0;
   padding: 0;
 }
-
 ul.arrows {
   font-size: 50px;
   list-style: none;
-	margin-left: 0;
-	padding-left: 1em;
-	text-indent: -1em;
+}
+margin-left 0 {
+  padding-left: 1em;
+  text-indent: -1em;
 }
 ul.arrows li:before {
-	content: "\00BB \0020";
+  content: "\00BB \0020";
 }
 .off-stage .slide {
   display: none;
@@ -108,7 +107,7 @@ ul.arrows li:before {
 }
 .centercontents h1 {
   float: none;
-  margin-bottom: 50px
+  margin-bottom: 50px;
 }
 .code {
   background-color: #fff;
@@ -150,10 +149,9 @@ ul.arrows li:before {
   -webkit-transform: translateZ(-600px) rotateY(180deg) translateZ(600px);
   -webkit-backface-visibility: hidden;
 }
-
 /* Title Slides */
 .title {
-  background-color: rgb(107,3,206);
+  background-color: #6b03ce;
   color: #fff;
 }
 .title h1 {
