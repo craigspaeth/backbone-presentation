@@ -47,7 +47,11 @@ html
         h1 Coffeescript
         ul.arrows
           li Less boilerplate
-          li -> vs =>
+          li 
+            span.code => 
+            | vs
+            span.code
+              #{"_.bind(this.renderArtwork, this)"}
           li 
             .code App?.Artsy?.Artwork?.get('title')
           
@@ -87,11 +91,12 @@ html
           
       
       section.slide.centered
-        h1 Node & Backbone: Splitting off to node
-        ul.arrows
-          li Jsdom & Zombie.js
-          li require Backbone app server-side
-          li ~300 tests in 7 seconds
+        .col
+          h1 Node & Backbone: Splitting off to node
+          ul.arrows
+            li Jsdom & Zombie.js
+            li require Backbone app server-side
+            li ~300 tests in 7 seconds
           
       section.slide.centered
         h1 Node & Backbone: Examples
@@ -113,6 +118,8 @@ html
             | @craigspaeth
             br
             | craig@art.sy
+            br
+            | github.com/craigspaeth
     
     .stage
     script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script

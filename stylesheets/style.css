@@ -57,9 +57,9 @@ body .stage {
 .twitter {
   position: fixed;
   bottom: 0;
-  right: 0;
+  left: 0;
   padding: 50px;
-  font-size: 26px;
+  font-size: 24px;
 }
 .table_flip {
   height: 150px;
@@ -157,6 +157,10 @@ h1.centered {
 .centered h1 {
   float: none;
   margin-bottom: 50px;
+}
+span.code {
+  display: inline-block;
+  margin-right: 10px;
 }
 .code {
   background-color: #fff;
